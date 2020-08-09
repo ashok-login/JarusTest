@@ -17,22 +17,14 @@ namespace JarusTest.API.Implementations
                 new Quote
                 {
                     QuoteId = 1,
-                    QuoteNumber = "Q92348",
-                    Status = StatusEnum.Issued,
-                    Applicant = "Mahasoft Technologies",
-                    QuoteDate = new DateTime(2020, 07, 14),
-                    QuoteEffectiveDate = new DateTime(2020, 07, 20),
-                    PremiumOptions = new PremiumOptions { Basic = 680, Preferred = 850, Premier = 1050 }
-                },
-                new Quote
-                {
-                    QuoteId = 2,
                     QuoteNumber = "Q973504",
-                    Status = StatusEnum.Pending,
+                    Status = "Pending",
                     Applicant = "James Feather LLC",
                     QuoteDate = new DateTime(2020, 07, 14),
                     QuoteEffectiveDate = new DateTime(2020, 07, 20),
-                    PremiumOptions = new PremiumOptions { Basic = 680, Preferred = 850, Premier = 1050 }
+                    PremiumOptionsBasic = 680,
+                    PremiumOptionsPreferred = 850,
+                    PremiumOptionsPremier = 1050
                 }
             };
         }

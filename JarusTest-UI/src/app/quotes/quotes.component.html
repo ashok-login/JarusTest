@@ -1,4 +1,30 @@
-<p>quotes works!</p>
-<p *ngFor="let quote of quotes">
-    {{quote.quoteId}}
-</p>
+<div class="container">
+    <div class="section-heading">Quote</div>
+    <div *ngFor="let quote of quotes" class="section-content">
+        <div class="row">
+            <div class="col-md-3">Quote: <strong>{{ quote.quoteNumber }}</strong></div>
+            <div class="col-md-4">
+                <label class="col-md-3">Status:</label>
+                <select id=" ddlPremiumStatus" class="col-md-8">
+                <option *ngFor="let status of getPremiumStatuses()" [value]="status">{{ status }}</option>
+                </select>
+            </div>
+            <div class="col-md-5">Applicant: <strong>{{ quote.applicant }}</strong></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">Quote Date: <strong>{{ quote.quoteDate | date: "dd/MM/yyyy" }}</strong></div>
+            <div class="col-md-4">Effective Date: <strong>{{ quote.quoteEffectiveDate | date: "dd/MM/yyyy" }}</strong>
+            </div>
+            <div class="col-md-5">
+                <input type="radio" name="premiumOptions">
+                Basic: <strong>{{ quote.premiumOptionsBasic | currency }}</strong>
+                <input type="radio" name="premiumOptions">
+                Preferred: <strong>{{ quote.premiumOptionsPreferred | currency }}</strong>
+                <input type="radio" name="premiumOptions">
+                Premier: <strong>{{ quote.premiumOptionsPremier | currency }}</strong>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-secondary float-right"
+        (click)="router.navigate(['/people'])">Search People</button>
+</div>

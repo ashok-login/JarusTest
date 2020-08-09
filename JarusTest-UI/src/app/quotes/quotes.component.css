@@ -1,0 +1,29 @@
+div {
+    padding: 10px 0px;
+}
+.left {
+    float: left;
+    width: 30%;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.middle {
+    float: left;
+    width: 30%;
+    text-align: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.right {
+    float: right;
+    width: 40%;
+    text-align: right;
+    border: 1px solid black;
+}
+
+.section-heading {
+    background-color:  #2592db;
+    padding: 10px;
+}

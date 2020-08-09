@@ -9,10 +9,13 @@ namespace JarusTest.API.Models
     {
         public int QuoteId { get; set; }
         public string QuoteNumber { get; set; }
-        public StatusEnum Status { get; set; }
+        public string Status { get; set; }
         public string Applicant { get; set; }
         public DateTime QuoteDate { get; set; }
         public DateTime QuoteEffectiveDate { get; set; }
-        public PremiumOptions PremiumOptions { get; set; }
+        public decimal PremiumOptionsBasic { get; set; }
+        public decimal PremiumOptionsPreferred { get; set; }
+        public decimal PremiumOptionsPremier { get; set; }
+
     }
 }
